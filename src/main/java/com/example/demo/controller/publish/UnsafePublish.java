@@ -7,6 +7,7 @@ import java.util.Arrays;
 
 /**
  * 不安全发布对象实例
+ * 发布对象:使一个对象能够被当前范围之外的代码所使用
  */
 @NotThreadSafe
 @Slf4j
@@ -16,7 +17,7 @@ public class UnsafePublish {
 
     public String[] getStates(){
         return states;
-    }
+    } //可以通过该方法得到states引用
 
     public static void main(String[] args) {
         UnsafePublish unsafePublish = new UnsafePublish();
